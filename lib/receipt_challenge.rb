@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "receipt_challenge/version"
+require 'pry'
+
+Dir[File.join('./lib/**/*.rb')].sort.each { |f| require f }
 
 module ReceiptChallenge
-  class Error < StandardError; end
-  # Your code goes here...
 end
