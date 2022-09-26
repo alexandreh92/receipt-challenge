@@ -31,8 +31,6 @@ class Product
   end
 
   def tax_free?
-    return false if imported?
-
     name.match?(/book|pills|chocolate/i)
   end
 

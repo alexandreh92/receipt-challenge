@@ -7,10 +7,10 @@ class ProductParser
 
   def parse
     first_sentence, price = parse_raw_text
-    amount, name = parse_first_sentence(first_sentence)
+    amount, *name = parse_first_sentence(first_sentence)
 
     Receipt.add_product(
-      Product.new(amount: amount, name: name, price: price)
+      Product.new(amount: amount, name: name.join(' '), price: price)
     )
   end
 
