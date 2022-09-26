@@ -40,5 +40,12 @@ module Repl
       def options_to_a
         options.map { |key, value| "#{key}: #{value[:label]}" }
       end
+
+      def run_command(command, opts = { clear: true })
+        clear if opts[:clear]
+
+        puts command
+        gets.chomp.strip
+      end
   end
 end

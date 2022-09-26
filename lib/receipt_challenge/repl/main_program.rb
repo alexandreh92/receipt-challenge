@@ -16,16 +16,16 @@ module Repl
       end
 
       def add_to_cart
-        clear
-        puts "Insert the product's amount, description and price " \
-             '([amount:number] [description:string] at [price:double]):'
-        command = gets.chomp.strip
-        puts command
+        input = run_command("Insert the product's amount, description and price " \
+        '([amount:number] [description:string] at [price:double]):')
+
+        ProductParser.new(text: input).parse
       end
 
       def generate_receipt
         clear
-        puts 'runnn'
+
+        Receipt.generate_receipt
       end
   end
 end

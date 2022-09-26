@@ -85,6 +85,10 @@ Style/SingleArgumentDig:
 Style/FrozenStringLiteralComment:
   Enabled: true
   AutoCorrect: true
+Style/FormatStringToken:
+  Enabled: false
+Style/ClassVars:
+  Enabled: false
 
 # RSpec
 RSpec/VariableName:
